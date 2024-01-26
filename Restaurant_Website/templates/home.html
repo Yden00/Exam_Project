@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+    <title>Gourmet Bliss - Home</title>
+</head>
+<body>
+    <header>
+        <nav class="container-fluid">
+            <ul>
+                <li><strong>Gourmet Bliss</strong></li>
+            </ul>
+            <ul>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="../../CV/CV.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Welcome to Gourmet Bliss</h2>
+            <p>Indulge in a symphony of flavors and a feast for the senses at Gourmet Bliss. Our culinary experts bring together a fusion of global cuisines, served in an elegant and welcoming atmosphere. Experience a gourmet journey that satisfies more than just your appetite.</p>
+        </section>
+        <section class="slideshow">
+            <img src="https://source.unsplash.com/random/800x600/?restaurant,food" alt="Gourmet Food" class="active">
+            <img src="https://source.unsplash.com/random/800x600/?restaurant,drink" alt="Exquisite Drinks">
+            <img src="https://source.unsplash.com/random/800x600/?restaurant,atmosphere" alt="Elegant Atmosphere">
+        </section>
+    </main>
+    <footer class="container">
+        <small>© 2024 Gourmet Bliss. All rights reserved.</small>
+    </footer>
+    <script>
+        const slides = document.querySelectorAll('.slideshow img');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
+
+
